@@ -7,22 +7,15 @@ using UnityEngine;
 public class AnimationPlayer : MonoBehaviour
 {
     private Animator _animator;
-    private MovementPlayer _player;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        _player = GetComponent<MovementPlayer>();
-    }
-
-    void Start()
-    {
-
     }
 
     void Update()
     {
-        if (_player.IsMoving)
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             _animator.SetBool("isMove", true);
         }
@@ -31,8 +24,7 @@ public class AnimationPlayer : MonoBehaviour
             _animator.SetBool("isMove", false);
         }
 
-        Debug.Log(_player.IsMoving);
-        if (_player.IsJumping)
+        if (Input.GetKey(KeyCode.Space))
         {
             _animator.SetTrigger("isJump");
         }

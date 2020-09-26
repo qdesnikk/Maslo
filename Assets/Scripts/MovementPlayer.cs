@@ -14,11 +14,6 @@ public class MovementPlayer : MonoBehaviour
 
     private Rigidbody2D _rigidbody2D;
     private bool isGrounded;
-    private bool isMoving;
-    private bool isJumping;
-
-    public bool IsMoving => isMoving;
-    public bool IsJumping => isJumping;
 
     private void Awake()
     {
@@ -34,13 +29,7 @@ public class MovementPlayer : MonoBehaviour
             Movement(1);
 
         if (Input.GetKey(KeyCode.Space))
-        {
             Jump();
-            isJumping = false;
-        }
-
-        if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
-            isMoving = false;
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
@@ -50,15 +39,11 @@ public class MovementPlayer : MonoBehaviour
     {
         _rigidbody2D.transform.Translate(direction * _speed * Time.deltaTime, 0, 0);
         transform.localScale = new Vector3(direction * 1, transform.localScale.y, 1);
-        isMoving = true;
     }
 
     private void Jump()
     {
         if (isGrounded)
-        {
             _rigidbody2D.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
-        }
     }
 }
