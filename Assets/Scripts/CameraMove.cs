@@ -10,7 +10,7 @@ public class CameraMove : MonoBehaviour
     private Transform player;
     private int lastX;
 
-    void Start()
+    private void Start()
     {
         offset = new Vector2(Mathf.Abs(offset.x), offset.y);
         FindPlayer(isLeft);
@@ -20,6 +20,7 @@ public class CameraMove : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         lastX = Mathf.RoundToInt(player.position.x);
+
         if (playerIsLeft)
         {
             transform.position = new Vector3(player.position.x - offset.x, player.position.y - offset.y, transform.position.z);
@@ -28,9 +29,9 @@ public class CameraMove : MonoBehaviour
         {
             transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z);
         }
-
     }
-    void Update()
+
+    private void Update()
     {
         if (player)
         {
@@ -47,6 +48,7 @@ public class CameraMove : MonoBehaviour
             {
                 target = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z);
             }
+
             Vector3 currentPosition = Vector3.Lerp(transform.position, target, dumping * Time.deltaTime);
             transform.position = currentPosition;
         }

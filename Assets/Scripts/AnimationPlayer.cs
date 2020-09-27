@@ -7,13 +7,15 @@ using UnityEngine;
 public class AnimationPlayer : MonoBehaviour
 {
     private Animator _animator;
+    private DiePlayer _player;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+        _player = GetComponent<DiePlayer>();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -28,5 +30,11 @@ public class AnimationPlayer : MonoBehaviour
         {
             _animator.SetTrigger("isJump");
         }
+
+        if (!_player.IsAlive)
+        {
+            _animator.SetTrigger("isDead");
+        }
+
     }
 }
