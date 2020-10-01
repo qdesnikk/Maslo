@@ -447,12 +447,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd791b576adebdd478ff7d0616467026, type: 3}
+  m_Script: {fileID: 11500000, guid: 18a3d2020c6089546bfeacadc4f81614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dumping: 5
-  offset: {x: 2, y: 1}
-  isLeft: 0
+  _player: {fileID: 1102713519}
+  _dumping: 2
+  _offset: {x: 2, y: 2}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -670,6 +670,12 @@ Transform:
   m_Father: {fileID: 1441491784}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1102713519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6460544188294923273, guid: 3e62b20dc934c864bae864e614604c7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6460544188738540739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1228292135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,5 +2204,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: knife
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8225234780659998647, guid: 65d27a8b00b4de642bc836499aae72cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 65d27a8b00b4de642bc836499aae72cc, type: 3}

@@ -12,11 +12,7 @@ public class DiePlayer : MonoBehaviour
     {
         if (collision.TryGetComponent<Knife>(out Knife knife))
         {
-            Debug.Log("die");
-            if (_isAlive == true)
-            {
-                _isAlive = false;
-            }
+           _isAlive = false;
         }
     }
 }

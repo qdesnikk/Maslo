@@ -165,10 +165,10 @@ GameObject:
   - component: {fileID: 6460544188294923268}
   - component: {fileID: 6460544188294923279}
   - component: {fileID: 6460544188294923272}
-  - component: {fileID: 984504204}
   - component: {fileID: 1039516217}
   - component: {fileID: 157905128728610220}
   - component: {fileID: 597623223616955186}
+  - component: {fileID: 2631209560794712087}
   m_Layer: 9
   m_Name: maslow_player_face
   m_TagString: Player
@@ -343,25 +343,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3109902, y: 1.47}
   m_EdgeRadius: 0
---- !u!114 &984504204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6460544188294923269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5103ab59d049de749a1e30a22e0c8d2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 1
-  _speed: 2
-  groundCheck: {fileID: 6460544188752013424}
-  checkRadius: 0.5
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &1039516217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +379,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452d650a6bd96e2498a5303d9d5d714d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2631209560794712087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460544188294923269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041b56aac43a5a44caaa876081851f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpForce: 1
+  _speed: 2
+  _groundCheck: {fileID: 6460544188752013424}
+  _checkRadius: 0.1
+  _whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &6460544188311298977
 GameObject:
   m_ObjectHideFlags: 0

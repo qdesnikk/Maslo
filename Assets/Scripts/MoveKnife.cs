@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-[RequireComponent(typeof(Transform))]
+[RequireComponent(typeof(Knife))]
 
-public class MovementKnife : MonoBehaviour
+public class MoveKnife : MonoBehaviour
 {
     [SerializeField] private Transform _endPoint;
 

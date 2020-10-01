@@ -40,9 +40,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8225234780659998645}
   - component: {fileID: 8225234780659998644}
-  - component: {fileID: 8225234780659998647}
   - component: {fileID: 8225234780659998642}
   - component: {fileID: 5339187131098074070}
+  - component: {fileID: 3312614861861506351}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -115,19 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8225234780659998647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8225234780659998646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce069128b5962d04fb6296f4605df390, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _endPoint: {fileID: 8225234780426829508}
 --- !u!60 &8225234780659998642
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -185,3 +172,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a51663db73d786478d8fe4d70eb40bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3312614861861506351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8225234780659998646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320646b6250a3e241b06c6e5d4a89d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endPoint: {fileID: 8225234780426829508}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Player))]
 
 public class AnimationPlayer : MonoBehaviour
 {
@@ -35,6 +35,5 @@ public class AnimationPlayer : MonoBehaviour
         {
             _animator.SetTrigger("isDead");
         }
-
     }
 }
