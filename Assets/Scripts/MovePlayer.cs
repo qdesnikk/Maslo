@@ -23,10 +23,10 @@ public class MovePlayer : MonoBehaviour
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
-            Movement(Direction.MoveLeft.GetHashCode());
+            Move(Direction.MoveLeft.GetHashCode());
 
         if (Input.GetKey(KeyCode.D))
-            Movement(Direction.MoveRight.GetHashCode());
+            Move(Direction.MoveRight.GetHashCode());
 
         if (Input.GetKey(KeyCode.Space))
             Jump();
@@ -40,7 +40,7 @@ public class MovePlayer : MonoBehaviour
         MoveLeft = -1,
     }
 
-    private void Movement(int direction)
+    private void Move(int direction)
     {
         _rigidbody2D.transform.Translate(direction * _speed * Time.deltaTime, 0, 0);
         transform.localScale = new Vector3(direction, transform.localScale.y, 1);
