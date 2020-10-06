@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Player))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(DiePlayer))]
 
 public class AnimationPlayer : MonoBehaviour
 {
